@@ -52,18 +52,18 @@
             <div class="form-group">
                 <label>Opciones de Vuelo:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="vuelo" value="sin-avion"> Sin Avión (999 MXN)</label>
-                    <label><input type="radio" name="vuelo" value="ida"> Avión de IDA (2,499 MXN)</label>
-                    <label><input type="radio" name="vuelo" value="ida-vuelta"> Avión de IDA y VUELTA (5,999 MXN)</label>
+                    <label><input type="radio" name="vuelo" value="999" checked> Sin Avión (999 MXN)</label>
+                    <label><input type="radio" name="vuelo" value="2499"> Avión de IDA (2,499 MXN)</label>
+                    <label><input type="radio" name="vuelo" value="5999"> Avión de IDA y VUELTA (5,999 MXN)</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Opciones de Hospedaje:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="hospedaje" value="sin-hotel"> Sin Hotel (499 MXN)</label>
-                    <label><input type="radio" name="hospedaje" value="sencilla"> Habitación Sencilla (799 MXN)</label>
-                    <label><input type="radio" name="hospedaje" value="doble"> Habitación Doble(999 MXN)</label>
+                    <label><input type="radio" name="hospedaje" value="499" checked> Sin Hotel (499 MXN)</label>
+                    <label><input type="radio" name="hospedaje" value="799"> Habitación Sencilla (799 MXN)</label>
+                    <label><input type="radio" name="hospedaje" value="999"> Habitación Doble(999 MXN)</label>
                 </div>
             </div>
 
@@ -91,11 +91,35 @@
 
             <div class="form-group">
                 <label for="dias-individual">Número de Días (769 MXN por día):</label>
-                <input type="number" id="dias-individual" name="dias-individual" min="1" max="365">
+                <input type="number" id="dias-individual" name="dias-individual" min="1" max="365" value="1">
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Individual</button>
+             <div class="CalculateI">
+                <label for="calculate">Total:</label>
+                <input type="text" id="calculate" name="calculate" value="0" readonly>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="CalculateI()">Cotización Individual</button>
+            
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- SECCIÓN 2: PAQUETES -->
         <section class="form-section">
@@ -104,23 +128,23 @@
             <div class="form-group">
                 <label>Destinos Turísticos:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="destino" value="suramerica"> SurAmérica Colorida (7,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="europa"> Europa de Ensueño(21,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="africa"> África Salvaje (17,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="asia"> Asia de Tradiciones(25,999 MXN)</label>
-                    <label><input type="radio" name="destino" value="norteamerica"> Norteamérica Moderna(12,999 MXN)</label>
+                    <label><input type="radio" name="destino" value="7999"> SurAmérica Colorida (7,999 MXN)</label>
+                    <label><input type="radio" name="destino" value="21999"> Europa de Ensueño(21,999 MXN)</label>
+                    <label><input type="radio" name="destino" value="17999" checked> África Salvaje (17,999 MXN)</label>
+                    <label><input type="radio" name="destino" value="25999"> Asia de Tradiciones(25,999 MXN)</label>
+                    <label><input type="radio" name="destino" value="12999"> Norteamérica Moderna(12,999 MXN)</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="dias-paquete">Número de Días (899 MXN por día):</label>
-                <input type="number" id="dias-paquete" name="dias-paquete" min="1" max="365">
+                <input type="number" id="dias-paquete" name="dias-paquete" min="1" max="365" value="1">
             </div>
 
             <div class="form-group">
                 <label>Paquete Especial (19,999 MXN):</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="especial" value="crucero"> Crucero Romántico (7 días)</label>
+                    <label><input type="checkbox" name="especial" value="crucero"> Crucero Romántico (7 días)</label>
                 </div>
             </div>
 
@@ -135,7 +159,15 @@
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Paquetes</button>
+
+
+            <div class="CalculateP">
+                <label for="calculatep">Total de Paquetes:</label>
+                <input type="text" id="calculatep" name="calculatep" value="0" readonly>
+
+            </div>
+
+            <button type="submit" class="submit-btn" onclick="CalculateP()">Cotización Paquetes</button>
         </section>
     </div>
 

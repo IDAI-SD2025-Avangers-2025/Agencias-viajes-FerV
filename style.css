@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: lightgray;
 }
 
 .header {
@@ -203,4 +204,11 @@ select, input[type="number"] {
     .client-row {
         flex-direction: column;
     }
+}
+label{
+    color: #28a745;
+}
+input{
+    color: maroon;
+    box-shadow: 5 5 6 7 rgba(0, 0, 2, 0.8);
 }
